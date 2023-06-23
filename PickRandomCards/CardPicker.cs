@@ -28,7 +28,7 @@ namespace PickRandomCards
                 case 1:
                     return "Spades";
                 case 2:
-                    return "Heart";
+                    return "Hearts";
                 case 3:
                     return "Clubs";
                 default:
@@ -38,7 +38,21 @@ namespace PickRandomCards
 
         private static string RandomValue()
         {
-            throw new NotImplementedException();
+            int value = random.Next(1, 14);
+
+            switch (value)
+            {
+                case 1:
+                    return "Ace";
+                case 11:
+                    return "Jack";
+                case 12:
+                    return "Queen";
+                case 13:
+                    return "King";
+                default:
+                    return value.ToString();
+            }
         }
     }
 }
